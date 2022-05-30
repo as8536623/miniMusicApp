@@ -1,0 +1,25 @@
+/* pages/home-music/index.wxss */
+.page-section{
+    width: 100%;
+}
+.page-section image{
+    width: 100%;
+    border-radius: 20rpx;
+}
+.van-search {
+    padding: 20rpx 0 !important;
+}
+/*.van-search .van-search__content{
+    border-radius: 40rpx;
+}*/
+.swiper{
+    border-radius: 10rpx;
+    overflow: hidden;
+    transform: translateY(0);
+}
+.scrollbox{
+    white-space: nowrap;
+}
+.peakbox{
+    margin-bottom: 50rpx;
+}

@@ -1,0 +1,29 @@
+/* components/common-header-info/index.wxss */
+.header{
+    position: relative;
+    margin: 30rpx 0;
+}
+
+.title {
+    color: #333;
+    font-size: 36rpx;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.right{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+.slot:empty + .default{
+    display: inline-block;
+}
+.default{
+    display: none
+}
+.icon{
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: middle;
+}

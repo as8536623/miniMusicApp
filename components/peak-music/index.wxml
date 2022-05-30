@@ -1,0 +1,21 @@
+<!--components/peak-music/index.wxml-->
+<wxs module="format" src="../../utils/format.wxs"></wxs>
+<view class="top-item">
+    <view class="content">
+        <view class="content-title">{{peakLists.name}}</view>
+        <view class="content-list">
+            <block wx:for="{{peakLists.tracks}}" wx:key="id">
+                <view wx:if="{{index < 3}}">
+                    <view class="content-list-item">
+                        <text>{{index+1}}. {{peakLists.tracks[index].name}} </text>
+                        <text class="singer">- {{peakLists.tracks[index].ar[0].name}}</text>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="album">
+        <image class="image" src="{{peakLists.coverImgUrl}}"></image>
+        <view class="play-counter">{{format.format(peakLists.playCount)}}</view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+<!--pages/video-detial/index.wxml-->
+<video src="{{mvURl}}"
+       object-fit="contain"
+       autoplay="true"
+       referrer-policy="origin"
+       class="video"></video>
+<view wx:for="{{1000}}" wx:key="*this">{{item}}</view>

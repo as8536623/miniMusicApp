@@ -1,0 +1,11 @@
+<!--components/music-data/index.wxml-->
+<view class="song-item" bindtap="handleItemClick" data-id="{{musicdata.id}}">
+  <image class="image" src="{{musicdata.al.picUrl}}"></image>
+  <view class="content">
+    <view class="name">{{musicdata.name}}</view>
+    <view class="source">{{musicdata.ar[0].name}} · {{musicdata.al.name}}</view>
+  </view>
+  <view class="arrow">
+    <van-icon name="arrow" color="#999" size="16px" />
+  </view>
+</view>

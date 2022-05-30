@@ -1,0 +1,15 @@
+/* pages/music-detial/index.wxss */
+.header > .title {
+    font-size: 36rpx;
+    font-weight: 700;
+    margin: 30rpx 0 0 30rpx;
+}
+
+.song-list {
+    padding: 0 10rpx;
+}
+
+.songSheetHeader{
+    width: 100vw;
+    margin-left: -10px;
+}

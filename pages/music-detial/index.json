@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "header-info": "/components/common-header-info/index",
+    "detial-musicList": "/components/detial-musicList/index",
+    "song-sheet-header": "/components/song-sheet-header/index"
+  }
+}

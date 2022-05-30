@@ -1,0 +1,81 @@
+<!--pages/home-music/index.wxml-->
+
+<!--搜索栏-->
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" bind:click-input="searchBtn"/>
+
+<!--轮播图-->
+<view class="page-section page-section-spacing swiper">
+    <swiper indicator-dots="#333"
+            autoplay="true" interval="2000" duration="500"
+            style="height: {{imageHeight}}px">
+        <block wx:for="{{homeMusicBanner}}" wx:key="*this">
+            <swiper-item>
+                <image src="{{item.pic}}"
+                       mode="widthFix"
+                       bindload="loadingImgHeight"
+                       id="imageEvent"
+                       style="height: {{imageHeight}}px">
+                </image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<!--歌曲推荐-->
+<view class="common-header" wx:if="{{songRecommendation}}">
+    <header-info leftTitle="歌曲推荐"
+                 bind:tap="goPeakMusicDetial"
+                 data-idx="0"
+                 data-type="song">
+    </header-info>
+    <block wx:for="{{songRecommendation}}" wx:key="id">
+        <music-data musicdata="{{item}}" bind:tap="goMusicPlayer" data-ids="{{item.id}}"></music-data>
+    </block>
+</view>
+
+<!--热门歌单-->
+<view wx:if="{{hotMusicLists}}">
+    <header-info leftTitle="热门歌单" bind:tap="totalSongSheet"></header-info>
+    <scroll-view scroll-x class="scrollbox">
+        <block wx:for="{{hotMusicLists}}" wx:key="idgenerate-modal">
+            <hotmusic-scroll musicLists="{{item}}"
+                             class="scrollitem"
+                             bind:tap="goSheetMusicDetial"
+                             data-idx="{{item.id}}"
+                             data-type="songsheet">
+            </hotmusic-scroll>
+        </block>
+    </scroll-view>
+</view>
+
+<!--推荐歌单-->
+<view wx:if="{{recommendLists}}">
+    <header-info leftTitle="推荐歌单" bind:tap="totalSongSheet"></header-info>
+    <scroll-view scroll-x class="scrollbox">
+        <block wx:for="{{recommendLists}}" wx:key="id">
+            <hotmusic-scroll musicLists="{{item}}"
+                             class="scrollitem"
+                             bind:tap="goSheetMusicDetial"
+                             data-idx="{{item.id}}"
+                             data-type="songsheet">
+            </hotmusic-scroll>
+        </block>
+    </scroll-view>
+</view>
+
+<!--巅峰榜-->
+<view class="peakbox" wx:if="{{rangMap}}">
+    <header-info leftTitle="巅峰榜" rightshow="{{false}}"></header-info>
+    <block wx:for="{{rangMap}}" wx:key="id">
+        <peak-music
+                peakLists="{{item}}"
+                bind:tap="goPeakMusicDetial"
+                data-idx="{{index}}"
+                data-type="song"
+        ></peak-music>
+    </block>
+</view>
+
+
+
+

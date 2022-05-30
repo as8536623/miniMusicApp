@@ -1,0 +1,11 @@
+<!--components/hotmusic-scroll/index.wxml-->
+<wxs module="format" src="../../utils/format.wxs"></wxs>
+<view class="item" bindtap="songItemClick" data-item="123">
+    <view class="top">
+        <image class="image" mode="widthFix" src="{{musicLists.coverImgUrl}}"></image>
+        <view class="play-counter">{{format.format(musicLists.playCount)}}</view>
+    </view>
+    <view class="bottom">
+        {{musicLists.name}}
+    </view>
+</view>

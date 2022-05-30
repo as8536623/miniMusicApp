@@ -1,0 +1,46 @@
+<!--pages/search-detial/index.wxml-->
+<!--搜索栏-->
+<van-search placeholder="请输入搜索关键词"
+            bind:change="searchKeyWords"
+            bind:search="searchKeyWordsResult"
+            show-action="{{isSearch}}"
+            shape="round"/>
+
+<view class="keywords" wx:if="{{ !isSearch }}">
+    <view class="title">热门搜索</view>
+    <view class="list">
+        <block wx:for="{{searchListData}}" wx:key="first">
+            <text class="tag"
+                  bind:tap="handleTagClick"
+                  data-value="{{item.first}}">
+                {{item.first}}
+            </text>
+        </block>
+    </view>
+</view>
+
+<!--搜索建议-->
+<view class="suggest" wx:if="{{isSearch && !searchResult.length && searchSuggestionsData.length}}">
+    <view class="title">搜索"{{isSearch}}"</view>
+    <view class="list">
+        <block wx:for="{{searchSuggestionsData}}" wx:key="id">
+            <view class="list-item"
+                  bind:tap="handleTagClick"
+                  data-value="{{item.name}}">
+                <image mode="widthFix" class="icon" src="/assets/images/icons/search_icon.png"></image>
+                <rich-text nodes="{{searchKeyNode[index]}}"></rich-text>
+               <!-- <text class="text">{{item.name}}</text>-->
+            </view>
+        </block>
+    </view>
+</view>
+
+<!--搜索结果-->
+<view class="result" wx:if="{{isSearch && searchResult.length && !searchSuggestionsData.length}}">
+    <view class="title">最佳匹配</view>
+    <view class="list">
+        <block wx:for="{{searchResult}}" wx:key="id">
+            <detial-musicList itemInfo="{{item}}" index="{{index+1}}"></detial-musicList>
+        </block>
+    </view>
+</view>

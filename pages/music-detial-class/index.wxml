@@ -1,0 +1,15 @@
+<!--pages/music-detial-class/index.wxml-->
+<view>
+    <block wx:for="{{songMenuList}}" wx:key="*this">
+        <view class="header">
+            <header-info leftTitle="{{item.tagsName}}" rightshow="{{false}}"></header-info>
+        </view>
+        <view class="menu-list">
+            <block wx:for="{{item.list}}"  wx:for-item="musicClassLists" wx:key="id">
+                <view class="menu-list-item">
+                    <detial-music-class itemInfo="{{musicClassLists}}"></detial-music-class>
+                </view>
+            </block>
+        </view>
+    </block>
+</view>

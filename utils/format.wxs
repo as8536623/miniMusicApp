@@ -1,0 +1,23 @@
+function format(value){
+  if(value >= 100000000){
+    value = (value / 100000000).toFixed(1)+'亿'
+  }else if(value >= 10000){
+    value = (value / 10000).toFixed(1)+'万'
+  }
+  return value
+}
+
+function leftFixZero(time){
+  var timer = time + ''
+  return ('00'+timer).slice(timer.length)
+}
+function formatTime(millisecond){
+  duration = millisecond / 1000
+  var minute = Math.floor( duration / 60)
+  var second = Math.floor( duration ) % 60
+  return leftFixZero(minute) + ':' + leftFixZero(second)
+}
+module.exports ={
+  format: format,
+  formatTime: formatTime
+}

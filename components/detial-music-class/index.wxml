@@ -1,0 +1,12 @@
+<!--components/detial-music-class/index.wxml-->
+<wxs module="format" src="../../utils/format.wxs"></wxs>
+<view class="item" bind:tap="songItemClick" data-idx="{{itemInfo.id}}" data-type="songsheet">
+    <view class="top">
+        <image class="image" mode="widthFix" src="{{itemInfo.coverImgUrl}}"></image>
+        <view class="play-counter">{{format.format(itemInfo.playCount)}}</view>
+    </view>
+    <view class="bottom">
+        {{itemInfo.name}}
+    </view>
+</view>
+

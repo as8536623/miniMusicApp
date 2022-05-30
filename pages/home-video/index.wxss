@@ -1,0 +1,9 @@
+/* components/video-list-item/index.wxss */
+.video{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.items{
+    width: 45%;
+}

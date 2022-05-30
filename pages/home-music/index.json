@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "header-info": "/components/common-header-info/index",
+    "music-data": "/components/music-data/index",
+    "hotmusic-scroll": "/components/hotmusic-scroll/index",
+    "peak-music": "/components/peak-music/index"
+  }
+}

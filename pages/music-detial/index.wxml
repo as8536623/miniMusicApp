@@ -1,0 +1,19 @@
+<!--pages/music-detial/index.wxml-->
+<view>
+    <view class="header" wx:if="{{type === 'song'}}">
+        <header-info leftTitle="{{musicDataLists.name}}" rightshow="{{false}}"></header-info>
+    </view>
+    <view class="header songSheetHeader" wx:elif="{{type === 'songsheet'}}">
+        <song-sheet-header itemInfo="{{musicDataLists}}"></song-sheet-header>
+    </view>
+</view>
+
+<view class="song-list">
+    <block wx:for="{{musicDataLists.tracks}}" wx:key="id">
+        <detial-musicList index="{{index+1}}"
+                      itemInfo="{{item}}"
+                      data-index="{{index}}"
+                      data-item="{{item}}">
+        </detial-musicList>
+    </block>
+</view>

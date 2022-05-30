@@ -1,0 +1,62 @@
+/* pages/search-detial/index.wxss */
+.keywords {
+    padding: 30rpx
+}
+
+.keywords .title {
+    font-size: 36rpx;
+    margin-bottom: 20rpx;
+}
+
+.keywords .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.keywords .tag {
+    font-size: 26rpx;
+    background-color: #fff;
+    padding: 0 12rpx;
+    border-radius: 16rpx;
+    margin-right: 20rpx;
+}
+
+.keywords .tag:first-of-type {
+    color: #26ce8a;
+}
+
+/* 搜索建议(Suggest)的样式 */
+.suggest {
+    padding: 20rpx 30rpx;
+}
+
+.suggest .title {
+    color: #26ce8a;
+    font-size: 34rpx;
+    font-weight: 700;
+}
+
+.suggest .list-item {
+    display: flex;
+    align-items: center;
+    margin-top: 16rpx;
+}
+
+.suggest .list-item .icon {
+    width: 66rpx;
+    margin-left: -20rpx;
+}
+
+.suggest .list-item .text {
+    font-size: 28rpx;
+}
+
+/* 搜索结果 */
+.result {
+    padding: 20rpx;
+}
+
+.result .title {
+    color: #26ce8a;
+    margin-left: 10rpx;
+}

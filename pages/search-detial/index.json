@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "header-info": "/components/common-header-info/index",
+    "detial-musicList": "/components/detial-musicList/index"
+  }
+}

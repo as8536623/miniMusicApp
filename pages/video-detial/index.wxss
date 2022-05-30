@@ -1,0 +1,9 @@
+/* pages/video-detial/index.wxss */
+page{
+    padding: 225px 0 0;
+}
+.video{
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
